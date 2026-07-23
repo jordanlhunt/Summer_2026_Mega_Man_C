@@ -13,7 +13,8 @@ int main(int argc, char *argv[]) {
   }
   SDL_Renderer *sdlRenderer = SDL_CreateRenderer(sdlWindow, NULL);
   if (sdlRenderer == NULL) {
-    SDL_Log("Renderer could not be created! SDL_Error: %s", SDL_GetError()) {
+    SDL_Log("Renderer could not be created! SDL_Error: %s", SDL_GetError());
+    {
       SDL_DestroyWindow(sdlRenderer);
       SDL_Quit();
       return 1;
